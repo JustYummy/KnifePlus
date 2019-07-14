@@ -10,6 +10,8 @@ KnifePlus is an Rich Editor based on the [Knife](https://github.com/mthli/Knife)
 
 You can download demo [here](https://github.com/JustYummy/KnifePlus/releases/download/1.0/KnifePlus.apk)
 
+
+# License
 ```
 Copyright 2019 JustYummy
 
