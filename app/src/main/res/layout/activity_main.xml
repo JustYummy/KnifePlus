@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <HorizontalScrollView
+            android:id="@+id/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <ImageButton
+                    android:id="@+id/bold"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?android:selectableItemBackground"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_format_bold" />
+
+            <ImageButton
+                    android:id="@+id/italic"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?android:selectableItemBackground"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_format_italic" />
+
+            <ImageButton
+                    android:id="@+id/underline"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?android:selectableItemBackground"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_format_underline" />
+
+            <ImageButton
+                    android:id="@+id/strikethrough"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?android:selectableItemBackground"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_format_strikethrough" />
+
+            <ImageButton
+                    android:id="@+id/bullet"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?android:selectableItemBackground"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_format_bullet" />
+
+            <ImageButton
+                    android:id="@+id/numbered"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?android:selectableItemBackground"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_format_numbered" />
+
+            <ImageButton
+                    android:id="@+id/quote"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?android:selectableItemBackground"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_format_quote" />
+
+            <ImageButton
+                    android:id="@+id/link"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?android:selectableItemBackground"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_insert_link" />
+
+            <ImageButton
+                    android:id="@+id/clear"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?android:selectableItemBackground"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_format_clear" />
+
+            <ImageButton
+                    android:id="@+id/show_html"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?android:selectableItemBackground"
+                    android:contentDescription="@null"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_show_html" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <ScrollView
+            android:id="@+id/rte_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/tools"
+            android:layout_alignParentTop="true"
+            android:fillViewport="true"
+            android:scrollbarStyle="insideOverlay">
+
+        <io.github.justyummy.knife.KnifeText
+                android:id="@+id/knife"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="top|start"
+                android:imeOptions="actionNone"
+                android:inputType="textMultiLine"
+                android:lineSpacingExtra="2sp"
+                android:padding="20dp"
+                app:bulletColor="@color/blue_500"
+                app:bulletGapWidth="@dimen/bullet_gap_width"
+                app:bulletRadius="@dimen/bullet_radius"
+                app:numberedColor="@color/blue_500"
+                app:historyEnable="true"
+                app:historySize="99"
+                app:linkColor="@color/blue_500"
+                app:linkUnderline="true"
+                app:quoteCapWidth="@dimen/quote_gap_width"
+                app:quoteColor="@color/blue_500"
+                app:quoteStripeWidth="@dimen/quote_stripe_width" />
+    </ScrollView>
+</RelativeLayout>
